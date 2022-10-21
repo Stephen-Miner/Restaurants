@@ -1,0 +1,16 @@
+---
+title: "Restaurant Analysis"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+library(ggplot2)
+```
+
+```{r}
+df1 <- read_csv(here("data", "FastFoodRestaurants.csv"), skip = 1) %>% clean_names()
+```
+
