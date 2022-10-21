@@ -8,9 +8,17 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(ggplot2)
+library(dsbox)
 ```
 
 ```{r}
-df1 <- read_csv(here("data", "FastFoodRestaurants.csv"), skip = 1) %>% clean_names()
+df1 <- read_csv(here("data", "FastFoodRestaurants.csv")) %>% clean_names()
+quinta <- laquinta
+```
+
+```{r}
+mcdonalds_nc <- df1 %>% filter(province=="NC" & name == "McDonald's")
+mcdonalds_nc_random <- mcdonalds_nc %>% slice_sample(n=28) %>% mutate(state=province, zip=postal_code) %>% select(1,2,11,12,6,5)
+quinta_nc <- quinta %>% filter(state=="NC")
 ```
 
