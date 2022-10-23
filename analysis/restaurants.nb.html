@@ -1777,17 +1777,26 @@ library(dsbox)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYxIDwtIHJlYWRfY3N2KGhlcmUoXCJkYXRhXCIsIFwiRmFzdEZvb2RSZXN0YXVyYW50cy5jc3ZcIikpICU+JSBjbGVhbl9uYW1lcygpXG5gYGAifQ== -->
 <pre class="r"><code>df1 &lt;- read_csv(here(&quot;data&quot;, &quot;FastFoodRestaurants.csv&quot;)) %&gt;% clean_names()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTAwMDAgQ29sdW1uczogMTDilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiLFwiXG5jaHIgKDgpOiBhZGRyZXNzLCBjaXR5LCBjb3VudHJ5LCBrZXlzLCBuYW1lLCBwb3N0YWxDb2RlLCBwcm92aW5jZSwgd2Vic2l0ZXNcbmRibCAoMik6IGxhdGl0dWRlLCBsb25naXR1ZGVcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 10000 Columns: 10── Column specification ────────────────────────────────────────────────────────────────
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTAwMDAgQ29sdW1uczogMTDilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiLFwiXG5jaHIgKDgpOiBhZGRyZXNzLCBjaXR5LCBjb3VudHJ5LCBrZXlzLCBuYW1lLCBwb3N0YWxDb2RlLCBwcm92aW5jZSwgd2Vic2l0ZXNcbmRibCAoMik6IGxhdGl0dWRlLCBsb25naXR1ZGVcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 10000 Columns: 10── Column specification ──────────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
 chr (8): address, city, country, keys, name, postalCode, province, websites
 dbl (2): latitude, longitude
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucXVpbnRhIDwtIGxhcXVpbnRhXG5gYGAifQ== -->
-<pre class="r"><code>quinta &lt;- laquinta</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucXVpbnRhIDwtIGxhcXVpbnRhXG5zdGF0ZXMgPC0gcmVhZF9jc3YoaGVyZShcImRhdGFcIixcInN0YXRlcy5jc3ZcIikpICU+JSBjbGVhbl9uYW1lcygpXG5gYGAifQ== -->
+<pre class="r"><code>quinta &lt;- laquinta
+states &lt;- read_csv(here(&quot;data&quot;,&quot;states.csv&quot;)) %&gt;% clean_names()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogNTEgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMik6IG5hbWUsIGFiYnJldmlhdGlvblxuZGJsICgxKTogYXJlYVxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 51 Columns: 3── Column specification ──────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (2): name, abbreviation
+dbl (1): area
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1800,8 +1809,38 @@ quinta_nc &lt;- quinta %&gt;% filter(state==&quot;NC&quot;)</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGF2ZXJzaW5lIDwtIGZ1bmN0aW9uKGxvbmcxLCBsYXQxLCBsb25nMiwgbGF0Miwgcm91bmQgPSAzKSB7XG4gICMgY29udmVydCB0byByYWRpYW5zXG4gIGxvbmcxID0gbG9uZzEgKiBwaSAvIDE4MFxuICBsYXQxICA9IGxhdDEgICogcGkgLyAxODBcbiAgbG9uZzIgPSBsb25nMiAqIHBpIC8gMTgwXG4gIGxhdDIgID0gbGF0MiAgKiBwaSAvIDE4MFxuICBSID0gNjM3MSAjIEVhcnRoIG1lYW4gcmFkaXVzIGluIGttXG4gIGEgPSBzaW4oKGxhdDIgLSBsYXQxKS8yKV4yICsgY29zKGxhdDEpICogY29zKGxhdDIpICogc2luKChsb25nMiAtIGxvbmcxKS8yKV4yXG4gIGQgPSBSICogMiAqIGFzaW4oc3FydChhKSlcbiAgcmV0dXJuKCByb3VuZChkLHJvdW5kKSApICMgZGlzdGFuY2UgaW4ga21cbn1cbmBgYCJ9 -->
+<pre class="r"><code>haversine &lt;- function(long1, lat1, long2, lat2, round = 3) {
+  # convert to radians
+  long1 = long1 * pi / 180
+  lat1  = lat1  * pi / 180
+  long2 = long2 * pi / 180
+  lat2  = lat2  * pi / 180
+  R = 6371 # Earth mean radius in km
+  a = sin((lat2 - lat1)/2)^2 + cos(lat1) * cos(lat2) * sin((long2 - long1)/2)^2
+  d = R * 2 * asin(sqrt(a))
+  return( round(d,round) ) # distance in km
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZG5fbmMgPC0gZGVubnlzICU+JSBmaWx0ZXIoc3RhdGUgPT0gXCJOQ1wiKVxubHFfbmMgPC0gbGFxdWludGEgJT4lIGZpbHRlcihzdGF0ZSA9PSBcIk5DXCIpIFxuZG5fbHFfbmMgPC0gZnVsbF9qb2luKGRuX25jLCBscV9uYywgYnkgPSBcInN0YXRlXCIpIFxuZG5fbHFfbmMgPC0gZG5fbHFfbmMgJT4lIG11dGF0ZShkaXN0YW5jZV9rbSA9IGhhdmVyc2luZShsb25naXR1ZGUueCwgbGF0aXR1ZGUueCwgbG9uZ2l0dWRlLnksIGxhdGl0dWRlLnkpKVxuZG5fbHFfbmNfbWluZGlzdCA8LSBkbl9scV9uYyAlPiVcbiAgZ3JvdXBfYnkoYWRkcmVzcy54KSAlPiVcbiAgc3VtbWFyaXNlKGNsb3Nlc3QgPSBtaW4oZGlzdGFuY2Vfa20pKVxuYGBgIn0= -->
+<pre class="r"><code>dn_nc &lt;- dennys %&gt;% filter(state == &quot;NC&quot;)
+lq_nc &lt;- laquinta %&gt;% filter(state == &quot;NC&quot;) 
+dn_lq_nc &lt;- full_join(dn_nc, lq_nc, by = &quot;state&quot;) 
+dn_lq_nc &lt;- dn_lq_nc %&gt;% mutate(distance_km = haversine(longitude.x, latitude.x, longitude.y, latitude.y))
+dn_lq_nc_mindist &lt;- dn_lq_nc %&gt;%
+  group_by(address.x) %&gt;%
+  summarise(closest = min(distance_km))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlJlc3RhdXJhbnQgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShoZXJlKQ0KbGlicmFyeShqYW5pdG9yKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShkc2JveCkNCmBgYA0KDQpgYGB7cn0NCmRmMSA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwgIkZhc3RGb29kUmVzdGF1cmFudHMuY3N2IikpICU+JSBjbGVhbl9uYW1lcygpDQpxdWludGEgPC0gbGFxdWludGENCmBgYA0KDQpgYGB7cn0NCm1jZG9uYWxkc19uYyA8LSBkZjEgJT4lIGZpbHRlcihwcm92aW5jZT09Ik5DIiAmIG5hbWUgPT0gIk1jRG9uYWxkJ3MiKQ0KbWNkb25hbGRzX25jX3JhbmRvbSA8LSBtY2RvbmFsZHNfbmMgJT4lIHNsaWNlX3NhbXBsZShuPTI4KSAlPiUgbXV0YXRlKHN0YXRlPXByb3ZpbmNlLCB6aXA9cG9zdGFsX2NvZGUpICU+JSBzZWxlY3QoMSwyLDExLDEyLDYsNSkNCnF1aW50YV9uYyA8LSBxdWludGEgJT4lIGZpbHRlcihzdGF0ZT09Ik5DIikNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlJlc3RhdXJhbnQgQW5hbHlzaXMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShoZXJlKQ0KbGlicmFyeShqYW5pdG9yKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShkc2JveCkNCmBgYA0KDQpgYGB7cn0NCmRmMSA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwgIkZhc3RGb29kUmVzdGF1cmFudHMuY3N2IikpICU+JSBjbGVhbl9uYW1lcygpDQpxdWludGEgPC0gbGFxdWludGENCnN0YXRlcyA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwic3RhdGVzLmNzdiIpKSAlPiUgY2xlYW5fbmFtZXMoKQ0KYGBgDQoNCmBgYHtyfQ0KbWNkb25hbGRzX25jIDwtIGRmMSAlPiUgZmlsdGVyKHByb3ZpbmNlPT0iTkMiICYgbmFtZSA9PSAiTWNEb25hbGQncyIpDQptY2RvbmFsZHNfbmNfcmFuZG9tIDwtIG1jZG9uYWxkc19uYyAlPiUgc2xpY2Vfc2FtcGxlKG49MjgpICU+JSBtdXRhdGUoc3RhdGU9cHJvdmluY2UsIHppcD1wb3N0YWxfY29kZSkgJT4lIHNlbGVjdCgxLDIsMTEsMTIsNiw1KQ0KcXVpbnRhX25jIDwtIHF1aW50YSAlPiUgZmlsdGVyKHN0YXRlPT0iTkMiKQ0KYGBgDQoNCmBgYHtyfQ0KaGF2ZXJzaW5lIDwtIGZ1bmN0aW9uKGxvbmcxLCBsYXQxLCBsb25nMiwgbGF0Miwgcm91bmQgPSAzKSB7DQogICMgY29udmVydCB0byByYWRpYW5zDQogIGxvbmcxID0gbG9uZzEgKiBwaSAvIDE4MA0KICBsYXQxICA9IGxhdDEgICogcGkgLyAxODANCiAgbG9uZzIgPSBsb25nMiAqIHBpIC8gMTgwDQogIGxhdDIgID0gbGF0MiAgKiBwaSAvIDE4MA0KICBSID0gNjM3MSAjIEVhcnRoIG1lYW4gcmFkaXVzIGluIGttDQogIGEgPSBzaW4oKGxhdDIgLSBsYXQxKS8yKV4yICsgY29zKGxhdDEpICogY29zKGxhdDIpICogc2luKChsb25nMiAtIGxvbmcxKS8yKV4yDQogIGQgPSBSICogMiAqIGFzaW4oc3FydChhKSkNCiAgcmV0dXJuKCByb3VuZChkLHJvdW5kKSApICMgZGlzdGFuY2UgaW4ga20NCn0NCmBgYA0KDQoNCmBgYHtyfQ0KZG5fbmMgPC0gZGVubnlzICU+JSBmaWx0ZXIoc3RhdGUgPT0gIk5DIikNCmxxX25jIDwtIGxhcXVpbnRhICU+JSBmaWx0ZXIoc3RhdGUgPT0gIk5DIikgDQpkbl9scV9uYyA8LSBmdWxsX2pvaW4oZG5fbmMsIGxxX25jLCBieSA9ICJzdGF0ZSIpIA0KZG5fbHFfbmMgPC0gZG5fbHFfbmMgJT4lIG11dGF0ZShkaXN0YW5jZV9rbSA9IGhhdmVyc2luZShsb25naXR1ZGUueCwgbGF0aXR1ZGUueCwgbG9uZ2l0dWRlLnksIGxhdGl0dWRlLnkpKQ0KZG5fbHFfbmNfbWluZGlzdCA8LSBkbl9scV9uYyAlPiUNCiAgZ3JvdXBfYnkoYWRkcmVzcy54KSAlPiUNCiAgc3VtbWFyaXNlKGNsb3Nlc3QgPSBtaW4oZGlzdGFuY2Vfa20pKQ0KYGBgDQoNCg0K</div>
 
 
 
