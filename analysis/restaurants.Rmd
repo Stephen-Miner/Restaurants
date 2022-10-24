@@ -44,8 +44,29 @@ lq_nc <- laquinta %>% filter(state == "NC")
 dn_lq_nc <- full_join(dn_nc, lq_nc, by = "state") 
 dn_lq_nc <- dn_lq_nc %>% mutate(distance_km = haversine(longitude.x, latitude.x, longitude.y, latitude.y))
 dn_lq_nc_mindist <- dn_lq_nc %>%
-  group_by(address.x) %>%
+  group_by(address.y) %>%
+  summarise(closest = min(distance_km))
+
+# IN ORDER TO DO THIS, HAD TO MODIFY TO GROUP BY THE LA QUINTA ADDRESS 
+```
+
+
+```{r}
+mc1 <- mcdonalds_nc_random %>% filter(state == "NC")
+mc2 <- full_join(mc1, lq_nc, by = "state") 
+mc2 <- mc2 %>% mutate(distance_km = haversine(longitude.x, latitude.x, longitude.y, latitude.y))
+mc_lq_nc_mindist <- mc2 %>%
+  group_by(address.y) %>%
   summarise(closest = min(distance_km))
 ```
 
 
+```{r}
+dn_lq_nc_mindist <-dn_lq_nc_mindist %>% mutate(comparision = "Dennys")
+mc_lq_nc_mindist <- mc_lq_nc_mindist %>% mutate(comparision = "McDonalds")
+midist_all = rbind(dn_lq_nc_mindist,mc_lq_nc_mindist)
+```
+
+```{r}
+midist_all %>% ggplot(aes(address.y, fill = comparision)) + geom_bar(aes(weight = closest))+theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + xlab("La Quinta Address") + ylab("Minimum Distance (miles) to Closest Restauraunt") + ggtitle("Denny's and McDonalds Distance from La Quinta in NC") + guides(fill=guide_legend(title="Restauraunt"))  + scale_fill_manual(values=c("darkslateblue","deeppink2"))
+```
